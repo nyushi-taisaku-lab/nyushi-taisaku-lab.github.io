@@ -2,27 +2,38 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High School Exam Portal</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <div id="app">
-        <header>
-            <h1 id="title">高校入試対策ポータル</h1>
-            <div class="lang-nav">
-                <button onclick="changeLang('ja')">JP</button>
-                <button onclick="changeLang('en')">EN</button>
+<body class="lang-ja">
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">NYUSHI LAB</span>
+            <div class="nav-links">
+                <a href="index.html" class="active">HOME</a>
+                <a href="pages/problems.html">MATERIALS</a>
+                <a href="pages/faq.html">FAQ</a>
             </div>
-        </header>
-        
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="./pages/problems.html">Materials</a>
-            <a href="./pages/faq.html">FAQ</a>
-        </nav>
-    </div>
+            <div class="lang-switch">
+                <button onclick="switchLang('ja')">JP</button>
+                <button onclick="switchLang('en')">EN</button>
+            </div>
+        </div>
+    </nav>
 
-    <script src="./js/lang.js"></script>
-    <script src="./js/security.js"></script>
+    <header class="hero">
+        <h1 data-ja="高校入試対策ポータル" data-en="Exam Prep Portal">高校入試対策ポータル</h1>
+        <p data-ja="志望校合格を全力でサポートします" data-en="Supporting your journey to success">志望校合格を全力でサポートします</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2 data-ja="最新のお知らせ" data-en="Latest News">最新のお知らせ</h2>
+            <p data-ja="ホームページを開設しました。これから資料を充実させていきます。" data-en="Portal launched. We will update materials soon.">ホームページを開設しました。これから資料を充実させていきます。</p>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
